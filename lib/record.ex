@@ -5,6 +5,12 @@ with some modifications
 Copyright (c) 2012 Plataformatec. See LICENSE file in Elixir.
 """
 defmodule Extra.Record do
+  defmacro __using__(_) do
+    quote do
+      import Elixir.Builtin, except: [defrecord: 3]
+      import Extra.Record
+    end
+  end
   @moduledoc """
   Functions to define and interact with Erlang records
   """
