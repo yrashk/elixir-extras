@@ -1,0 +1,11 @@
+{application, elixir_extras,
+ [
+  {description, "Elixir Extras"},
+  {vsn, "git"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
