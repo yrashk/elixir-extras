@@ -7,7 +7,7 @@ Copyright (c) 2012 Plataformatec. See LICENSE file in Elixir.
 defmodule Extra.Record do
   defmacro __using__(_) do
     quote do
-      import Elixir.Builtin, except: [defrecord: 3]
+      import Kernel, except: [defrecord: 3]
       import Extra.Record
     end
   end
@@ -30,7 +30,7 @@ defmodule Extra.Record do
 
   @doc """
   Main entry point for records definition.
-  This is invoked directly by `Elixir.Builtin.defrecord`.
+  This is invoked directly by `Kernel.defrecord`.
   Returns the quoted expression of a module given by name.
   """
   defmacro defrecord(name, values, opts) do
